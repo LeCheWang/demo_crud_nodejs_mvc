@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form input {
+            width: 300px;
+            padding: 10px;
+        }
+        form button {
+            width: 325px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/nations/<%= nation._id%>?_method=PATCH" method="POST">
+        <label for="">
+            Name
+        </label>
+        <br>
+        <input id="ip_name" type="text" name="name"  placeholder="type name" value="<%= nation.name %>">
+
+        <label style="margin-top: 20px;" for="">
+            Description
+        </label>
+        <br>
+        <input id="ip_description" type="text" name="description" placeholder="type description" value="<%= nation.description %>">
+        <button type="submit" style="margin-top: 20px; padding: 10px;">Edit Nation</button> 
+    </form>
+</body>
+</html>
